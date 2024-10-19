@@ -1,0 +1,73 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\LAPTRINHTRUCQUAN\\LTTQ_19102024\\WinFormsCore (1)\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D34BBC77-EBCA-4BFF-B668-E147D2129D45}|WinFormsCore\\WinFormsCore.csproj|d:\\laptrinhtrucquan\\lttq_19102024\\winformscore (1)\\winformscore\\views\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D34BBC77-EBCA-4BFF-B668-E147D2129D45}|WinFormsCore\\WinFormsCore.csproj|solutionrelative:winformscore\\views\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D34BBC77-EBCA-4BFF-B668-E147D2129D45}|WinFormsCore\\WinFormsCore.csproj|D:\\LAPTRINHTRUCQUAN\\LTTQ_19102024\\WinFormsCore (1)\\winformscore\\views\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D34BBC77-EBCA-4BFF-B668-E147D2129D45}|WinFormsCore\\WinFormsCore.csproj|solutionrelative:winformscore\\views\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "D:\\LAPTRINHTRUCQUAN\\LTTQ_19102024\\WinFormsCore (1)\\WinFormsCore\\Views\\MainForm.cs",
+              "RelativeDocumentMoniker": "WinFormsCore\\Views\\MainForm.cs",
+              "ToolTip": "D:\\LAPTRINHTRUCQUAN\\LTTQ_19102024\\WinFormsCore (1)\\WinFormsCore\\Views\\MainForm.cs",
+              "RelativeToolTip": "WinFormsCore\\Views\\MainForm.cs",
+              "ViewState": "AgIAALcBAAAAAAAAAAAqwM4BAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T01:49:26.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "D:\\LAPTRINHTRUCQUAN\\LTTQ_19102024\\WinFormsCore (1)\\WinFormsCore\\Views\\MainForm.cs",
+              "RelativeDocumentMoniker": "WinFormsCore\\Views\\MainForm.cs",
+              "ToolTip": "D:\\LAPTRINHTRUCQUAN\\LTTQ_19102024\\WinFormsCore (1)\\WinFormsCore\\Views\\MainForm.cs [Design]",
+              "RelativeToolTip": "WinFormsCore\\Views\\MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T01:17:15.909Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
