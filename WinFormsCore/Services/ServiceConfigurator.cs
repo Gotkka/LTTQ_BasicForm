@@ -26,7 +26,7 @@ namespace WinFormsCore.Services
                 options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
             // Add other services here if needed
-            services.AddTransient<MainForm>(); // Register MainForm for DI
+            services.AddTransient<Customers>(); // Register MainForm for DI
             
             // Apply pending migrations at startup
             var serviceProvider = services.BuildServiceProvider();

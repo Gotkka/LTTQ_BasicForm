@@ -44,6 +44,7 @@ using WinFormsCore.Views;
 using WinFormsCore.Services;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
+using WinFormsCore.Models.Entities;
 
 namespace WinFormsCore
 {
@@ -72,10 +73,11 @@ namespace WinFormsCore
             var serviceProvider = ServiceConfigurator.ConfigureServices(services, configuration);
 
             // Resolve the MainForm using DI
-            var mainForm = serviceProvider.GetRequiredService<MainForm>();
+            var mainForm = serviceProvider.GetRequiredService<Customers>();
 
             // Start the application
-            Application.Run(mainForm);
+            Application.Run(new Products());
+            //Application.Run(mainForm);
         }
     }
 }
