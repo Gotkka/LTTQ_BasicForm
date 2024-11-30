@@ -1,4 +1,6 @@
-﻿using Spire.Doc;
+﻿using NPOI.SS.UserModel;
+using NPOI.XSSF.UserModel;
+using Spire.Doc;
 using Spire.Doc.Documents;
 using Spire.Doc.Formatting;
 using WinFormsCore.Models.Entities;
@@ -562,6 +564,53 @@ namespace WinFormsCore.Views
                 MessageBox.Show("Vui lòng chọn một hàng để xuất thông tin.");
             }
         }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Tạo một Workbook mới
+                XSSFWorkbook workbook = new XSSFWorkbook();
+                ISheet sheet = workbook.CreateSheet("Sheet1");
+
+                // Tạo hàng tiêu đề từ DataGridView
+                IRow headerRow = sheet.CreateRow(0);
+                for (int i = 0; i < dgvShow.Columns.Count; i++)
+                {
+                    headerRow.CreateCell(i).SetCellValue(dgvShow.Columns[i].HeaderText);
+                }
+
+                // Thêm dữ liệu từ DataGridView vào các hàng Excel
+                for (int i = 0; i < dgvShow.Rows.Count; i++)
+                {
+                    if (dgvShow.Rows[i].IsNewRow) continue;  // Bỏ qua dòng trống
+
+                    IRow row = sheet.CreateRow(i + 1); // Bắt đầu từ dòng 1 (dòng 0 là tiêu đề)
+                    for (int j = 0; j < dgvShow.Columns.Count; j++)
+                    {
+                        var cellValue = dgvShow.Rows[i].Cells[j].Value;
+                        if (cellValue != null)
+                        {
+                            row.CreateCell(j).SetCellValue(cellValue.ToString());
+                        }
+                    }
+                }
+
+                // Lưu tệp Excel
+                string filePath = @"D:\LAPTRINHTRUCQUAN\LTTQ_19102024\WinFormsCore (1)\WinFormsCore\CustomersExcel\CustomersExport.xlsx";  // Đảm bảo rằng đường dẫn tồn tại
+                using (FileStream fs = new FileStream(filePath, FileMode.Create, FileAccess.Write))
+                {
+                    workbook.Write(fs);
+                }
+
+                MessageBox.Show("Dữ liệu đã được xuất ra Excel thành công!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
+
     }
 }
 

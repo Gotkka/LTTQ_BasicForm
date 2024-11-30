@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "D:\\LAPTRINHTRUCQUAN\\LTTQ_19102024\\WinFormsCore (1)\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D34BBC77-EBCA-4BFF-B668-E147D2129D45}|WinFormsCore\\WinFormsCore.csproj|d:\\laptrinhtrucquan\\lttq_19102024\\winformscore (1)\\winformscore\\views\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D34BBC77-EBCA-4BFF-B668-E147D2129D45}|WinFormsCore\\WinFormsCore.csproj|solutionrelative:winformscore\\views\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D34BBC77-EBCA-4BFF-B668-E147D2129D45}|WinFormsCore\\WinFormsCore.csproj|d:\\laptrinhtrucquan\\lttq_19102024\\winformscore (1)\\winformscore\\views\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D34BBC77-EBCA-4BFF-B668-E147D2129D45}|WinFormsCore\\WinFormsCore.csproj|solutionrelative:winformscore\\views\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D34BBC77-EBCA-4BFF-B668-E147D2129D45}|WinFormsCore\\WinFormsCore.csproj|d:\\laptrinhtrucquan\\lttq_19102024\\winformscore (1)\\winformscore\\views\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D34BBC77-EBCA-4BFF-B668-E147D2129D45}|WinFormsCore\\WinFormsCore.csproj|solutionrelative:winformscore\\views\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D34BBC77-EBCA-4BFF-B668-E147D2129D45}|WinFormsCore\\WinFormsCore.csproj|d:\\laptrinhtrucquan\\lttq_19102024\\winformscore (1)\\winformscore\\views\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D34BBC77-EBCA-4BFF-B668-E147D2129D45}|WinFormsCore\\WinFormsCore.csproj|solutionrelative:winformscore\\views\\customers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D34BBC77-EBCA-4BFF-B668-E147D2129D45}|WinFormsCore\\WinFormsCore.csproj|d:\\laptrinhtrucquan\\lttq_19102024\\winformscore (1)\\winformscore\\views\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D34BBC77-EBCA-4BFF-B668-E147D2129D45}|WinFormsCore\\WinFormsCore.csproj|solutionrelative:winformscore\\views\\index.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,39 +43,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Products.cs",
-              "DocumentMoniker": "D:\\LAPTRINHTRUCQUAN\\LTTQ_19102024\\WinFormsCore (1)\\WinFormsCore\\Views\\Products.cs",
-              "RelativeDocumentMoniker": "WinFormsCore\\Views\\Products.cs",
-              "ToolTip": "D:\\LAPTRINHTRUCQUAN\\LTTQ_19102024\\WinFormsCore (1)\\WinFormsCore\\Views\\Products.cs",
-              "RelativeToolTip": "WinFormsCore\\Views\\Products.cs",
-              "ViewState": "AgIAABcCAAAAAAAAAAAEwCICAABCAAAAAAAAAA==",
+              "Title": "Index.cs",
+              "DocumentMoniker": "D:\\LAPTRINHTRUCQUAN\\LTTQ_19102024\\WinFormsCore (1)\\WinFormsCore\\Views\\Index.cs",
+              "RelativeDocumentMoniker": "WinFormsCore\\Views\\Index.cs",
+              "ToolTip": "D:\\LAPTRINHTRUCQUAN\\LTTQ_19102024\\WinFormsCore (1)\\WinFormsCore\\Views\\Index.cs",
+              "RelativeToolTip": "WinFormsCore\\Views\\Index.cs",
+              "ViewState": "AgIAAH8BAAAAAAAAAAApwAsBAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T01:01:34.248Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Customers.cs",
-              "DocumentMoniker": "D:\\LAPTRINHTRUCQUAN\\LTTQ_19102024\\WinFormsCore (1)\\WinFormsCore\\Views\\Customers.cs",
-              "RelativeDocumentMoniker": "WinFormsCore\\Views\\Customers.cs",
-              "ToolTip": "D:\\LAPTRINHTRUCQUAN\\LTTQ_19102024\\WinFormsCore (1)\\WinFormsCore\\Views\\Customers.cs",
-              "RelativeToolTip": "WinFormsCore\\Views\\Customers.cs",
-              "ViewState": "AgIAALEBAAAAAAAAAAAkwIcBAABQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T01:00:55.716Z",
+              "WhenOpened": "2024-11-30T15:14:45.742Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Products.cs [Design]",
-              "DocumentMoniker": "D:\\LAPTRINHTRUCQUAN\\LTTQ_19102024\\WinFormsCore (1)\\WinFormsCore\\Views\\Products.cs",
-              "RelativeDocumentMoniker": "WinFormsCore\\Views\\Products.cs",
-              "ToolTip": "D:\\LAPTRINHTRUCQUAN\\LTTQ_19102024\\WinFormsCore (1)\\WinFormsCore\\Views\\Products.cs [Design]",
-              "RelativeToolTip": "WinFormsCore\\Views\\Products.cs [Design]",
+              "Title": "Index.cs [Design]",
+              "DocumentMoniker": "D:\\LAPTRINHTRUCQUAN\\LTTQ_19102024\\WinFormsCore (1)\\WinFormsCore\\Views\\Index.cs",
+              "RelativeDocumentMoniker": "WinFormsCore\\Views\\Index.cs",
+              "ToolTip": "D:\\LAPTRINHTRUCQUAN\\LTTQ_19102024\\WinFormsCore (1)\\WinFormsCore\\Views\\Index.cs [Design]",
+              "RelativeToolTip": "WinFormsCore\\Views\\Index.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T00:49:31.183Z",
+              "WhenOpened": "2024-11-30T15:14:41.885Z",
               "EditorCaption": " [Design]"
             }
           ]

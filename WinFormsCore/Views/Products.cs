@@ -23,10 +23,10 @@ namespace WinFormsCore.Views
         private int totalPage;
 
         private readonly ShopContext context;
-        public Products()
+        public Products(ShopContext _context)
         {
             InitializeComponent();
-            //_context = context;
+            _context = context;
         }
 
         private void Products_Load(object sender, EventArgs e)
@@ -569,37 +569,97 @@ namespace WinFormsCore.Views
 
         private void btnExport_Click(object sender, EventArgs e)
         {
-            // Tạo một Workbook mới
-            XSSFWorkbook workbook = new XSSFWorkbook();
-            ISheet sheet = workbook.CreateSheet("Sheet1");
-
-            // Tạo hàng tiêu đề từ DataGridView
-            IRow headerRow = sheet.CreateRow(0);
-            for (int i = 0; i < dgvShow.Columns.Count; i++)
+            try
             {
-                headerRow.CreateCell(i).SetCellValue(dgvShow.Columns[i].HeaderText);
-            }
+                // Tạo một Workbook mới
+                XSSFWorkbook workbook = new XSSFWorkbook();
+                ISheet sheet = workbook.CreateSheet("Sheet1");
 
-            // Thêm dữ liệu từ DataGridView vào các hàng Excel
-            for (int i = 0; i < dgvShow.Rows.Count; i++)
-            {
-                IRow row = sheet.CreateRow(i + 1); // Bắt đầu từ dòng 1 (dòng 0 là tiêu đề)
-                for (int j = 0; j < dgvShow.Columns.Count; j++)
+                // Tạo hàng tiêu đề từ DataGridView
+                IRow headerRow = sheet.CreateRow(0);
+                for (int i = 0; i < dgvShow.Columns.Count; i++)
                 {
-                    if (dgvShow.Rows[i].Cells[j].Value != null)
+                    headerRow.CreateCell(i).SetCellValue(dgvShow.Columns[i].HeaderText);
+                }
+
+                // Thêm dữ liệu từ DataGridView vào các hàng Excel
+                for (int i = 0; i < dgvShow.Rows.Count; i++)
+                {
+                    if (dgvShow.Rows[i].IsNewRow) continue;  // Bỏ qua dòng trống
+
+                    IRow row = sheet.CreateRow(i + 1); // Bắt đầu từ dòng 1 (dòng 0 là tiêu đề)
+                    for (int j = 0; j < dgvShow.Columns.Count; j++)
                     {
-                        row.CreateCell(j).SetCellValue(dgvShow.Rows[i].Cells[j].Value.ToString());
+                        var cellValue = dgvShow.Rows[i].Cells[j].Value;
+                        if (cellValue != null)
+                        {
+                            row.CreateCell(j).SetCellValue(cellValue.ToString());
+                        }
                     }
                 }
-            }
 
-            // Lưu tệp Excel
-            using (FileStream fs = new FileStream("D:\\LAPTRINHTRUCQUAN\\LTTQ_19102024\\WinFormsCore (1)\\WinFormsCore\\bin\\ProductsExcel\\ProductsExport.xlsx", FileMode.Create, FileAccess.Write))
+                // Lưu tệp Excel
+                string filePath = @"D:\LAPTRINHTRUCQUAN\LTTQ_19102024\WinFormsCore (1)\WinFormsCore\ProductsExcel\ProductsExport.xlsx";  // Đảm bảo rằng đường dẫn tồn tại
+                using (FileStream fs = new FileStream(filePath, FileMode.Create, FileAccess.Write))
+                {
+                    workbook.Write(fs);
+                }
+
+                MessageBox.Show("Dữ liệu đã được xuất ra Excel thành công!");
+            }
+            catch (Exception ex)
             {
-                workbook.Write(fs);
+                MessageBox.Show("Lỗi: " + ex.Message);
             }
+        }
 
-            MessageBox.Show("Dữ liệu đã được xuất ra Excel thành công!");
+
+        private void SearchProduct()
+        {
+            string searchText = txtSearch.Text.Trim();
+
+            using(var context = new ShopContext())
+            {
+                try
+                {
+                    if (string.IsNullOrWhiteSpace(searchText))
+                    {
+                        allProducts = context.Products.ToList();
+                    }
+                    else
+                    {
+                        decimal searchPrice;
+                        bool isNumeric = decimal.TryParse(searchText, out searchPrice);
+
+                        allProducts = context.Products
+                            .Where(c => c.ProductName.Contains(searchText) ||
+                                        (c.Supplier != null && c.Supplier.CompanyName.Contains(searchText)) ||
+                                        (isNumeric && c.UnitPrice == searchPrice) ||  // Kiểm tra trực tiếp giá trị số
+                                        c.Package.Contains(searchText))
+                            .ToList();
+
+                    }
+
+                    if (allProducts.Count() == 0)
+                    {
+                        MessageBox.Show("Không tìm thấy sản phẩm nào khớp với từ khóa tìm kiếm.");
+                    }
+
+                    currentPage = 1;
+                    UpdateTotalPages();
+                    DisplayCurrentPage();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error during search: {ex.Message}");
+                }
+            }
+        }
+
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            SearchProduct();
         }
     }
 

@@ -65,6 +65,7 @@
             label11 = new Label();
             txbTimKiem = new TextBox();
             lblTrang = new Label();
+            btnExport = new Button();
             groupBox1.SuspendLayout();
             panel5.SuspendLayout();
             panel4.SuspendLayout();
@@ -88,6 +89,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(btnExport);
             groupBox1.Controls.Add(btnCapNhat);
             groupBox1.Controls.Add(btnThemMoi);
             groupBox1.Controls.Add(panel5);
@@ -105,7 +107,7 @@
             // btnCapNhat
             // 
             btnCapNhat.Enabled = false;
-            btnCapNhat.Location = new Point(514, 185);
+            btnCapNhat.Location = new Point(449, 185);
             btnCapNhat.Name = "btnCapNhat";
             btnCapNhat.Size = new Size(125, 45);
             btnCapNhat.TabIndex = 6;
@@ -115,7 +117,7 @@
             // 
             // btnThemMoi
             // 
-            btnThemMoi.Location = new Point(360, 185);
+            btnThemMoi.Location = new Point(319, 185);
             btnThemMoi.Name = "btnThemMoi";
             btnThemMoi.Size = new Size(124, 45);
             btnThemMoi.TabIndex = 5;
@@ -127,7 +129,7 @@
             // 
             panel5.Controls.Add(txbDienThoai);
             panel5.Controls.Add(label6);
-            panel5.Location = new Point(67, 182);
+            panel5.Location = new Point(31, 178);
             panel5.Name = "panel5";
             panel5.Size = new Size(287, 55);
             panel5.TabIndex = 4;
@@ -152,7 +154,7 @@
             // 
             panel4.Controls.Add(txbQuocGia);
             panel4.Controls.Add(label5);
-            panel4.Location = new Point(352, 117);
+            panel4.Location = new Point(392, 117);
             panel4.Name = "panel4";
             panel4.Size = new Size(287, 55);
             panel4.TabIndex = 3;
@@ -177,7 +179,7 @@
             // 
             panel3.Controls.Add(txbTen);
             panel3.Controls.Add(label4);
-            panel3.Location = new Point(67, 117);
+            panel3.Location = new Point(31, 117);
             panel3.Name = "panel3";
             panel3.Size = new Size(287, 55);
             panel3.TabIndex = 2;
@@ -202,7 +204,7 @@
             // 
             panel2.Controls.Add(cbTinhTP);
             panel2.Controls.Add(label3);
-            panel2.Location = new Point(352, 50);
+            panel2.Location = new Point(392, 50);
             panel2.Name = "panel2";
             panel2.Size = new Size(287, 55);
             panel2.TabIndex = 1;
@@ -229,7 +231,7 @@
             // 
             panel1.Controls.Add(txbHo);
             panel1.Controls.Add(label2);
-            panel1.Location = new Point(67, 50);
+            panel1.Location = new Point(31, 50);
             panel1.Name = "panel1";
             panel1.Size = new Size(287, 55);
             panel1.TabIndex = 0;
@@ -400,6 +402,16 @@
             lblTrang.TabIndex = 14;
             lblTrang.Text = "label12";
             // 
+            // btnExport
+            // 
+            btnExport.Location = new Point(580, 185);
+            btnExport.Name = "btnExport";
+            btnExport.Size = new Size(124, 45);
+            btnExport.TabIndex = 7;
+            btnExport.Text = "Export";
+            btnExport.UseVisualStyleBackColor = true;
+            btnExport.Click += btnExport_Click;
+            // 
             // Customers
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -481,5 +493,6 @@
         private ToolStripMenuItem chỉnhSửaToolStripMenuItem;
         private ToolStripMenuItem xóaToolStripMenuItem;
         private ToolStripMenuItem exportToolStripMenuItem;
+        private Button btnExport;
     }
 }

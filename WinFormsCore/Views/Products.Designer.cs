@@ -34,7 +34,7 @@
             chỉnhSửaToolStripMenuItem = new ToolStripMenuItem();
             xóaToolStripMenuItem = new ToolStripMenuItem();
             errorProvider1 = new ErrorProvider(components);
-            txbSearch = new TextBox();
+            txtSearch = new TextBox();
             cbColumn = new ComboBox();
             label11 = new Label();
             cbSort = new ComboBox();
@@ -107,12 +107,13 @@
             // 
             errorProvider1.ContainerControl = this;
             // 
-            // txbSearch
+            // txtSearch
             // 
-            txbSearch.Location = new Point(564, 386);
-            txbSearch.Name = "txbSearch";
-            txbSearch.Size = new Size(198, 27);
-            txbSearch.TabIndex = 27;
+            txtSearch.Location = new Point(564, 386);
+            txtSearch.Name = "txtSearch";
+            txtSearch.Size = new Size(198, 27);
+            txtSearch.TabIndex = 27;
+            txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // cbColumn
             // 
@@ -391,7 +392,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(862, 779);
             Controls.Add(lblNumberPage);
-            Controls.Add(txbSearch);
+            Controls.Add(txtSearch);
             Controls.Add(cbColumn);
             Controls.Add(label11);
             Controls.Add(cbSort);
@@ -430,7 +431,7 @@
         private ToolStripMenuItem chỉnhSửaToolStripMenuItem;
         private ToolStripMenuItem xóaToolStripMenuItem;
         private ErrorProvider errorProvider1;
-        private TextBox txbSearch;
+        private TextBox txtSearch;
         private ComboBox cbColumn;
         private Label label11;
         private ComboBox cbSort;

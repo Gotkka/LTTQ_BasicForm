@@ -76,7 +76,7 @@ namespace WinFormsCore
             var mainForm = serviceProvider.GetRequiredService<Customers>();
 
             // Start the application
-            Application.Run(new Products());
+            Application.Run(new Login());
             //Application.Run(mainForm);
         }
     }
